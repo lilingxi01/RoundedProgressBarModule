@@ -3,7 +3,7 @@
     <declare-styleable name="RoundedProgressBar">
         <attr name="roundedRadius" format="integer"/>
         <attr name="progress" format="integer"/>
-        <attr name="barBackgroundColor" format="reference"/>
-        <attr name="barProgressColor" format="reference"/>
+        <attr name="barBackgroundColor" format="color"/>
+        <attr name="barProgressColor" format="color"/>
     </declare-styleable>
 </resources>
