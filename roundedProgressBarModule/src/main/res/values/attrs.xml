@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundedProgressBar">
+        <attr name="roundedRadius" format="integer"/>
+        <attr name="progress" format="integer"/>
+        <attr name="barBackgroundColor" format="reference"/>
+        <attr name="barProgressColor" format="reference"/>
+    </declare-styleable>
+</resources>
