@@ -13,8 +13,8 @@ public class RoundedProgressBar extends View {
 
     private int roundedRadius = -1;
     private int progress = 0;
-    private int barBackgroundColor = -1;
-    private int barProgressColor = -1;
+    private int barBackgroundColor = 0;
+    private int barProgressColor = 0;
     private int drawingDirection = 0;
 
     private Paint mPaint;
@@ -48,11 +48,11 @@ public class RoundedProgressBar extends View {
             roundedRadius = (canvas.getWidth() > canvas.getHeight()) ? canvas.getHeight() / 2 : canvas.getWidth() / 2;
         }
 
-        if(barBackgroundColor == -1){
+        if(barBackgroundColor == 0){
             barBackgroundColor = Color.WHITE;
         }
 
-        if(barProgressColor == -1){
+        if(barProgressColor == 0){
             barProgressColor = Color.BLACK;
         }
 
@@ -78,11 +78,13 @@ public class RoundedProgressBar extends View {
             canvas.drawLine(startPointX, startPointY, endPointBackgroundX, endPointY, mPaint);
 
             // 绘制进度
-            mPaint.setStyle(Paint.Style.STROKE);
-            mPaint.setStrokeCap(Paint.Cap.ROUND);
-            mPaint.setColor(barProgressColor);
-            mPaint.setStrokeWidth(roundedRadius * 2);
-            canvas.drawLine(startPointX, startPointY, endPointProgressX, endPointY, mPaint);
+            if(progress != 0) {
+                mPaint.setStyle(Paint.Style.STROKE);
+                mPaint.setStrokeCap(Paint.Cap.ROUND);
+                mPaint.setColor(barProgressColor);
+                mPaint.setStrokeWidth(roundedRadius * 2);
+                canvas.drawLine(startPointX, startPointY, endPointProgressX, endPointY, mPaint);
+            }
         }
 
         if(drawingDirection == DrawingDirection.VERTICAL){
@@ -101,11 +103,13 @@ public class RoundedProgressBar extends View {
             canvas.drawLine(startPointX, startPointY, endPointX, endPointBackgroundY, mPaint);
 
             // 绘制进度
-            mPaint.setStyle(Paint.Style.STROKE);
-            mPaint.setStrokeCap(Paint.Cap.ROUND);
-            mPaint.setColor(barProgressColor);
-            mPaint.setStrokeWidth(roundedRadius * 2);
-            canvas.drawLine(startPointX, startPointY, endPointX, endPointProgressY, mPaint);
+            if(progress != 0) {
+                mPaint.setStyle(Paint.Style.STROKE);
+                mPaint.setStrokeCap(Paint.Cap.ROUND);
+                mPaint.setColor(barProgressColor);
+                mPaint.setStrokeWidth(roundedRadius * 2);
+                canvas.drawLine(startPointX, startPointY, endPointX, endPointProgressY, mPaint);
+            }
         }
     }
 
@@ -118,9 +122,9 @@ public class RoundedProgressBar extends View {
             progress =
                     attrs.getInt(R.styleable.RoundedProgressBar_progress, -1);
             barBackgroundColor =
-                    attrs.getInt(R.styleable.RoundedProgressBar_barBackgroundColor, -1);
+                    attrs.getColor(R.styleable.RoundedProgressBar_barBackgroundColor, 0);
             barProgressColor =
-                    attrs.getInt(R.styleable.RoundedProgressBar_barProgressColor, -1);
+                    attrs.getColor(R.styleable.RoundedProgressBar_barProgressColor, 0);
         } finally {
             attrs.recycle();
         }
