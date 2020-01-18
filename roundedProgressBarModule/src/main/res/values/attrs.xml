@@ -2,7 +2,7 @@
 <resources>
     <declare-styleable name="RoundedProgressBar">
         <attr name="roundedRadius" format="dimension"/>
-        <attr name="progress" format="integer"/>
+        <attr name="progress" format="float"/>
         <attr name="barBackgroundColor" format="color"/>
         <attr name="barProgressColor" format="color"/>
         <attr name="drawingDirection" format="integer">

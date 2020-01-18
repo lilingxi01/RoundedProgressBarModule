@@ -14,8 +14,8 @@ import android.view.View;
 
 public class RoundedProgressBar extends View {
 
-    private float roundedRadius = -1;
-    private int progress = 0;
+    private float roundedRadius = -1f;
+    private float progress = 0f;
     private int barBackgroundColor = 0;
     private int barProgressColor = 0;
     private int drawingDirection = 0;
@@ -70,8 +70,8 @@ public class RoundedProgressBar extends View {
         }
 
         // TODO 报错
-        if(progress < 0 || progress > 100){
-            progress = 0;
+        if(progress < 0f || progress > 100f){
+            progress = 0f;
         }
 
         // 横向绘制
@@ -90,7 +90,7 @@ public class RoundedProgressBar extends View {
             mPaint.setStyle(Paint.Style.FILL);
             mPaint.setColor(barProgressColor);
             RectF rectF_progress = new RectF(roundedRadius * -2f, 0,
-                    canvas.getWidth() * progress / 100, canvas.getHeight());
+                    canvas.getWidth() * progress / 100f, canvas.getHeight());
             canvas.drawRoundRect(rectF_progress, roundedRadius, roundedRadius, mPaint);
         }
 
@@ -108,7 +108,7 @@ public class RoundedProgressBar extends View {
             // 绘制进度
             mPaint.setStyle(Paint.Style.FILL);
             mPaint.setColor(barProgressColor);
-            RectF rectF_progress = new RectF(0, canvas.getHeight() * (100 - progress) / 100,
+            RectF rectF_progress = new RectF(0, canvas.getHeight() * (100f - progress) / 100f,
                     canvas.getWidth(), canvas.getHeight() + roundedRadius * 2f);
             canvas.drawRoundRect(rectF_progress, roundedRadius, roundedRadius, mPaint);
         }
@@ -121,7 +121,7 @@ public class RoundedProgressBar extends View {
             roundedRadius =
                     attrs.getDimension(R.styleable.RoundedProgressBar_roundedRadius, -1f);
             progress =
-                    attrs.getInt(R.styleable.RoundedProgressBar_progress, -1);
+                    attrs.getFloat(R.styleable.RoundedProgressBar_progress, -1f);
             barBackgroundColor =
                     attrs.getColor(R.styleable.RoundedProgressBar_barBackgroundColor, 0);
             barProgressColor =
@@ -133,16 +133,17 @@ public class RoundedProgressBar extends View {
         }
     }
 
-    public void setProgress(int progress){
+    public void setProgress(float progress){
         this.progress = progress;
         invalidate();
     }
 
-    /**
-     * 单位为dp
-     * @param radius
-     */
-    public void setRoundedRadius(int radius){
+    public void setRoundedRadius(float radius){
+        this.roundedRadius = radius;
+        invalidate();
+    }
+
+    public void setRoundedRadiusByDip(float radius){
         this.roundedRadius = dpToPixel(radius);
         invalidate();
     }

@@ -10,6 +10,7 @@
         android:layout_width="30dp"
         android:layout_height="75dp"
         android:layout_centerInParent="true"
+        android:id="@+id/roundedProgressBar"
         app:drawingDirection="vertical"
         app:progress="65"
         app:roundedRadius="4dp"
