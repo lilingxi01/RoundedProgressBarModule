@@ -4,11 +4,11 @@ It's an Android library module that can help you to create an amazing rounded pr
 
 这是一个美妙的安卓圆角进度条插件，极端优雅，无与伦比。
 
-<br><br>
+<br>
 
 ![image](https://github.com/lilingxi01/RoundedProgressBarModule/blob/master/pics/sample_pic_2.png)
 
-<br><br>
+<br>
 
 ## 导入方法
 
@@ -85,4 +85,4 @@ XML预置变量如下：
 
 <br>
 
-**尽情享用这舒适而从容的圆角进度条插件吧～🉑️**
+**尽情享用这舒适而从容的圆角进度条插件吧～**
