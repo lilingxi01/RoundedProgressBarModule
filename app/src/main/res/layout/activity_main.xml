@@ -7,11 +7,12 @@
     tools:context=".MainActivity">
 
     <cn.tacitech.roundedprogressbarmodule.RoundedProgressBar
-        android:layout_width="84dp"
-        android:layout_height="24dp"
+        android:layout_width="30dp"
+        android:layout_height="75dp"
         android:layout_centerInParent="true"
-        app:drawingDirection="horizontal"
+        app:drawingDirection="vertical"
         app:progress="65"
+        app:roundedRadius="4dp"
         app:barBackgroundColor="#fff3f3f3"
         app:barProgressColor="#ffafc7bf"/>
 
