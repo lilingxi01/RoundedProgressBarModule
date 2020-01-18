@@ -1,18 +1,18 @@
 # RoundedProgressBarModule [![](https://www.jitpack.io/v/lilingxi01/RoundedProgressBarModule.svg)](https://www.jitpack.io/#lilingxi01/RoundedProgressBarModule)
 
+![image](https://github.com/lilingxi01/RoundedProgressBarModule/blob/master/pics/sample_pic_2.png)
+
+<br>
+
 It's an Android library module that can help you to create an amazing rounded progress bar.
 
 这是一个美妙的安卓圆角进度条插件，极端优雅，无与伦比。
 
 <br>
 
-![image](https://github.com/lilingxi01/RoundedProgressBarModule/blob/master/pics/sample_pic_2.png)
-
-<br>
-
 ## 导入方法
 
-1. 在根目录的build.gradle中添加以下依赖
+#### 1. 在根目录的build.gradle中添加以下依赖
 
     	allprojects {
     		repositories {
@@ -21,7 +21,7 @@ It's an Android library module that can help you to create an amazing rounded pr
     		}
     	}
 
-2. 在app文件夹下的build.gradle中添加以下依赖
+#### 2. 在app文件夹下的build.gradle中添加以下依赖
 
     	dependencies {
     		implementation 'com.github.lilingxi01:RoundedProgressBarModule:v1.0'
@@ -51,31 +51,31 @@ XML预置变量如下：
 
 ## Java调用方法
 
-1. 实例化RoundedProgressBar
+#### 1. 实例化RoundedProgressBar
         
         RoundedProgressBar roundedProgressBar = findViewById(R.id.roundedProgressBar);
         
-2. 设置进度
+#### 2. 设置进度
         
         roundedProgressBar.setProgress(15f); // 设置进度
         
-3. 设置圆角半径（若不设置，则默认为腰圆。该方法的值以像素为单位）
+#### 3. 设置圆角半径（若不设置，则默认为腰圆。该方法的值以像素为单位）
         
         roundedProgressBar.setRoundedRadius(16); // 设置半径（像素）
         
-4. 设置圆角半径（该方法的值以dp为单位）
+#### 4. 设置圆角半径（该方法的值以dp为单位）
         
         roundedProgressBar.setRoundedRadiusByDip(16); // 设置半径（Dp）
         
-5. 设置进度条方向
+#### 5. 设置进度条方向
         
         roundedProgressBar.setDrawingDirection(RoundedProgressBar.DrawingDirection.VERTICAL); // 设置进度条方向
         
-6. 设置进度条背景层颜色
+#### 6. 设置进度条背景层颜色
         
         roundedProgressBar.setBarBackgroundColor(getColor(R.color.colorAccent)); // 设置进度条背景层颜色
         
-7. 设置进度条前景层颜色
+#### 7. 设置进度条前景层颜色
         
         roundedProgressBar.setBarProgressColor(getColor(R.color.colorPrimary)); // 设置进度条前景层颜色
         
@@ -86,3 +86,5 @@ XML预置变量如下：
 <br>
 
 **尽情享用这舒适而从容的圆角进度条插件吧～**
+
+<br>
