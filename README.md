@@ -35,6 +35,7 @@
         app:barProgressColor="#ffafc7bf"/>
    	
 XML预置变量如下：
+
 | 变量名 | 变量 | 解释 |
 | --- | --- | --- |
 | drawingDirection | horizontal / Vertical | 进度条方向 —— 横向 / 纵向 |
