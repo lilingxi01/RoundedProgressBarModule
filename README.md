@@ -83,7 +83,7 @@ XML预置变量如下：
         
         roundedProgressBar.setBarProgressColor(getColor(R.color.colorPrimary)); // 设置进度条前景层颜色
         
-<br>
+<br><br>
 
 ****
 
