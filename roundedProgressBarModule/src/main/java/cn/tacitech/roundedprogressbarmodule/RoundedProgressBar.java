@@ -89,7 +89,7 @@ public class RoundedProgressBar extends View {
             // 绘制进度
             mPaint.setStyle(Paint.Style.FILL);
             mPaint.setColor(barProgressColor);
-            RectF rectF_progress = new RectF(roundedRadius * -1f, 0,
+            RectF rectF_progress = new RectF(roundedRadius * -2f, 0,
                     canvas.getWidth() * progress / 100, canvas.getHeight());
             canvas.drawRoundRect(rectF_progress, roundedRadius, roundedRadius, mPaint);
         }
@@ -108,8 +108,8 @@ public class RoundedProgressBar extends View {
             // 绘制进度
             mPaint.setStyle(Paint.Style.FILL);
             mPaint.setColor(barProgressColor);
-            RectF rectF_progress = new RectF(roundedRadius * -1f, 0,
-                    canvas.getWidth() * progress / 100, canvas.getHeight());
+            RectF rectF_progress = new RectF(0, canvas.getHeight() * (100 - progress) / 100,
+                    canvas.getWidth(), canvas.getHeight() + roundedRadius * 2f);
             canvas.drawRoundRect(rectF_progress, roundedRadius, roundedRadius, mPaint);
         }
     }
