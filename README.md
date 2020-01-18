@@ -24,7 +24,7 @@ It's an Android library module that can help you to create an amazing rounded pr
 2. 在app文件夹下的build.gradle中添加以下依赖
 
     	dependencies {
-    		implementation 'com.github.lilingxi01:RoundedProgressBarModule:v0.1-alpha'
+    		implementation 'com.github.lilingxi01:RoundedProgressBarModule:v1.0'
     	}
 
 ## XML调用
