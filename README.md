@@ -27,6 +27,8 @@ It's an Android library module that can help you to create an amazing rounded pr
     		implementation 'com.github.lilingxi01:RoundedProgressBarModule:v1.0'
     	}
 
+<br>
+
 ## XML调用
    	
     <cn.tacitech.roundedprogressbarmodule.RoundedProgressBar
@@ -48,6 +50,8 @@ XML预置变量如下：
 | roundedRadius | 填写有效长度值 | 圆角半径（不填写则默认为腰圆） |
 | barBackgroundColor | 颜色 | 进度条背景层颜色 |
 | barProgressColor | 颜色 | 进度条前景层颜色 |
+
+<br>
 
 ## Java调用方法
 
@@ -83,7 +87,7 @@ XML预置变量如下：
 
 ****
 
-<br>
+<br><br>
 
 **尽情享用这舒适而从容的圆角进度条插件吧～**
 
